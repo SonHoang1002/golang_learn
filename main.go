@@ -11,8 +11,32 @@ func main() {
 	//fmt.Println(result)
 
 	//server_side.CreateServer()
+	//server_side.GetMusicApi()
+
 	//server_side.StaticServer()
-	server_side.RouteServer()
+
+	//server_side.RouteServer()
+
+	//server_side.InitMySQLConnection()
+
+	//if err := server_side.CreateUser("hts", 22); err != nil {
+	//	fmt.Println("Error adding user:", err)
+	//}
+
+	//if err := server_side.DeleteUser(2); err != nil {
+	//	fmt.Println("Error deleting user:", err)
+	//}
+
+	//if err := server_side.UpdateUser(3, "sco len cb", 22); err != nil {
+	//	fmt.Println("Error deleting user:", err)
+	//}
+
+	//var allUser = server_side.GetAllUser()
+	//for _, item := range allUser {
+	//	fmt.Printf("User: username -> %s, age -> %d\n", item.Username, item.Age)
+	//}
+
+	server_side.TemplateServer()
 
 }
 
