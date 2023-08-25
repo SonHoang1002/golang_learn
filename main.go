@@ -1,7 +1,8 @@
 package main
 
 import (
-	"awesomeProject/server_side"
+	"fmt"
+	"sync"
 )
 
 func main() {
@@ -36,7 +37,20 @@ func main() {
 	//	fmt.Printf("User: username -> %s, age -> %d\n", item.Username, item.Age)
 	//}
 
-	server_side.TemplateServer()
+	//server_side.TemplateServer()
+	//server_side.WebSocketServer()
+
+	var (
+		wg sync.WaitGroup
+	)
+	sum := 0
+	list := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	for item := range list {
+		wg.Add(1)
+		sum += item
+		wg.Done()
+	}
+	fmt.Printf("sum %d ", sum)
 
 }
 
